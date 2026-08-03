@@ -1,12 +1,12 @@
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-
-
 public class Password{
-        void checkPassword(String password)
-        {
+
+    void checkPassword(String password)
+    {
         int count=0;
+
         if(password.matches(".{8,}"))
         {
             System.out.println("Password length is valid");
@@ -16,14 +16,17 @@ public class Password{
         {
             System.out.println("Password length is invalid");
         }
+
         if(password.matches(".*[A-Z].*") ){
             System.out.println("Uppercase");
             count++;
         }
+
         if(password.matches(".*[0-9].*")){
             System.out.println("Numbers");
             count++;
         }
+
         if(password.matches(".*[&$#@].*")){
             System.out.println("Special Characters");
             count++;
@@ -32,8 +35,7 @@ public class Password{
         if(count==4)
         {
             System.out.println("Password is Strong");
-        }
-       
+        }       
         else if(count==2 || count==3)
         {
             System.out.println("Password is Medium");
@@ -43,9 +45,6 @@ public class Password{
             System.out.println("Password is Weak");
         }
         
-
-
-
 
         String password1="Password@123";
         int count1=0;
@@ -59,33 +58,27 @@ public class Password{
         Matcher matcher2 = pattern2.matcher(password1);
         Matcher matcher3 = pattern3.matcher(password1);
         if(matcher.matches())
-        {
-            
+        {            
             count1++;
         }
         if(matcher1.matches())
-        {
-           
+        {           
             count1++;
         }
         if(matcher2.matches())
-        {
-            
+        {            
             count1++;
         }
         if(matcher3.matches())
-        {
-           
+        {           
             count1++;
         }
         
 
-
         if(count1==4)
         {
             System.out.println("Password is Strong");
-        }
-       
+        }       
         else if(count1==2 || count1==3)
         {
             System.out.println("Password is Medium");
@@ -94,10 +87,5 @@ public class Password{
         {
             System.out.println("Password is Weak");
         }
-        
-
-
-
     }
-
 }
