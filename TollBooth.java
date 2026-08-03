@@ -3,7 +3,6 @@ import java.util.Scanner;
 record Vehicle(String number, String type) {}
 
 public class TollBooth {
-
     public static void main(String[] args) {
 
         Scanner sc = new Scanner(System.in);
