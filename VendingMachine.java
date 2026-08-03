@@ -1,8 +1,6 @@
 import java.util.Scanner;
 
-
 enum Coin {ONE,TWO,FIVE,TEN};
-
 
 public class VendingMachine{
     public static void main(String args[])
@@ -28,8 +26,7 @@ public class VendingMachine{
         }
         if(total>price)
         {
-                
-                 System.out.print("Paid Change:"+(total-price));
+             System.out.print("Paid Change:"+(total-price));
         }
     }
 }
