@@ -16,7 +16,7 @@ public class Driver {
         {
             boolean duplicate = false;
 
-            for(int i=0 ; i<count ; i++)
+            for(int i = 0 ; i < count ; i++)
             {
                 if(newCard.equals(cards[i]))
                 {

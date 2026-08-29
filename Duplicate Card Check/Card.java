@@ -1,3 +1,4 @@
+import java.util.Objects;
 public class Card {
     
     private String  rank;
@@ -29,6 +30,6 @@ public class Card {
 
     public int hashCode()
     {
-        return rank.hashCode() + suit.hashCode();
+        return Objects.hash(rank, suit);
     }
 }
