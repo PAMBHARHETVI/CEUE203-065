@@ -6,10 +6,8 @@ public class ThreadPoolRunner {
 
     public static void main(String[] args) {
 
-        // Create a fixed thread pool with 3 threads
         ExecutorService executor = Executors.newFixedThreadPool(3);
 
-        // Submit 10 tasks
         for (int i = 1; i <= 10; i++) {
 
             final int taskId = i;
@@ -36,11 +34,9 @@ public class ThreadPoolRunner {
             });
         }
 
-        // No more tasks will be submitted
         executor.shutdown();
 
         try {
-            // Wait until all tasks finish
             if (executor.awaitTermination(30, TimeUnit.SECONDS)) {
                 System.out.println("All tasks completed.");
             } else {
